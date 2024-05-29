@@ -1,0 +1,18 @@
+import { Button, VerticalBox } from "std-widgets.slint";
+
+export component AppWindow inherits Window {
+    in-out property<bool> is-mining: false;
+    callback start-stop-mining();
+    VerticalBox {
+        Text {
+            text: "Mine TapSwaps!";
+        }
+        Button {
+            text: "Start/Stop";
+            clicked => {
+                root.start-stop-mining();
+            }
+        
+        }
+    }
+}

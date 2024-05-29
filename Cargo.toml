@@ -1,0 +1,20 @@
+[package]
+name = "auto-clicker2"
+version = "0.1.0"
+authors = ["dev"]
+edition = "2021"
+build = "build.rs"
+description = "an auto clicker which uses adb command to send command to connected phone"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+slint = "1.6"
+adb_client = "*"
+
+[build-dependencies]
+slint-build = "1.6"
+
+[package.metadata.bundle]
+name = "TapSwap Miner"
+identifier = "io.github.bereketgodebo.auto-clicker"
