@@ -16,5 +16,5 @@ adb_client = "*"
 slint-build = "1.6"
 
 [package.metadata.bundle]
-name = "TapSwap Miner"
+name = "TapSwap Miner-4Guru"
 identifier = "io.github.bereketgodebo.auto-clicker"

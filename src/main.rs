@@ -17,7 +17,9 @@ fn main() -> Result<(), slint::PlatformError> {
                 let mut connection = 
                     AdbTcpConnection::new(Ipv4Addr::from([127,0,0,1]), 5037).unwrap();
                 timer.start(TimerMode::Repeated, std::time::Duration::from_millis(1500), move || {
-                    let _ = connection.shell_command(&None, vec!["input", "tap","540", "1140"]);
+                    let str_commands = "input tap 270 940 && input tap 540 940 && input tap 810 940 && input tap 270 1040 && input tap 540 1040 && input tap 810 1040 && input tap 270 1140 && input tap 540 1140 && input tap 810 1140 && input tap 270 1340 && input tap 540 1340 && input tap 810 1340 && input tap 370 1440 && input tap 540 1440 && input tap 710 1440";
+                    let commands: Vec<&str> = str_commands.split_whitespace().collect();
+                    let _ = connection.shell_command(&None, commands);
                 });
                 
             }
